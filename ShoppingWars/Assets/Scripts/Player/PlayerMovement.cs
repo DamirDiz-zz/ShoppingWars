@@ -3,7 +3,9 @@
 public class PlayerMovement : MonoBehaviour
 {
 	public float speed = 6f;            // The speed that the player will move at.
-	
+	public string controlsHorizontal = "";
+	public string controlsVertical = "";
+
 	Vector3 movement;                   // The vector to store the direction of the player's movement.
 	//Animator anim;                      // Reference to the animator component.
 	Rigidbody playerRigidbody;          // Reference to the player's rigidbody.
@@ -24,8 +26,8 @@ public class PlayerMovement : MonoBehaviour
 	void FixedUpdate ()
 	{
 		// Store the input axes.
-		float h = Input.GetAxisRaw ("Horizontal");
-		float v = Input.GetAxisRaw ("Vertical");
+		float h = Input.GetAxisRaw (controlsHorizontal);
+		float v = Input.GetAxisRaw (controlsVertical);
 		
 		// Move the player around the scene.
 		Move (h, v);
