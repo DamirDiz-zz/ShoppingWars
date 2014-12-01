@@ -1652,7 +1652,7 @@ GameObject:
   - 23: {fileID: 326694707}
   - 114: {fileID: 326694714}
   - 114: {fileID: 326694713}
-  - 54: {fileID: 326694712}
+  - 54: {fileID: 326694705}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Player
@@ -1660,6 +1660,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!54 &326694705
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5400000, guid: 6aa9778ea277e4d8fb8bd267cdf502e7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1729667071}
+  m_GameObject: {fileID: 326694704}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: Infinity
+  m_AngularDrag: Infinity
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!23 &326694707
 Renderer:
   m_ObjectHideFlags: 0
@@ -1715,22 +1731,6 @@ Transform:
   - {fileID: 1932101524}
   m_Father: {fileID: 2095958989}
   m_RootOrder: 0
---- !u!54 &326694712
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5400000, guid: 6aa9778ea277e4d8fb8bd267cdf502e7,
-    type: 2}
-  m_PrefabInternal: {fileID: 1729667071}
-  m_GameObject: {fileID: 326694704}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: Infinity
-  m_AngularDrag: Infinity
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &326694713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3087,7 +3087,7 @@ GameObject:
   - 23: {fileID: 673635459}
   - 114: {fileID: 673635466}
   - 114: {fileID: 673635465}
-  - 54: {fileID: 673635464}
+  - 54: {fileID: 673635457}
   m_Layer: 0
   m_Name: Player4
   m_TagString: Player
@@ -3095,6 +3095,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!54 &673635457
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5400000, guid: 6aa9778ea277e4d8fb8bd267cdf502e7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1079392274}
+  m_GameObject: {fileID: 673635456}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: Infinity
+  m_AngularDrag: Infinity
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!23 &673635459
 Renderer:
   m_ObjectHideFlags: 0
@@ -3150,22 +3166,6 @@ Transform:
   - {fileID: 177960344}
   m_Father: {fileID: 2095958989}
   m_RootOrder: 3
---- !u!54 &673635464
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5400000, guid: 6aa9778ea277e4d8fb8bd267cdf502e7,
-    type: 2}
-  m_PrefabInternal: {fileID: 1079392274}
-  m_GameObject: {fileID: 673635456}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: Infinity
-  m_AngularDrag: Infinity
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &673635465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3925,7 +3925,7 @@ GameObject:
   - 23: {fileID: 847633668}
   - 114: {fileID: 847633677}
   - 114: {fileID: 847633676}
-  - 54: {fileID: 847633675}
+  - 54: {fileID: 847633672}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Player
@@ -3988,7 +3988,7 @@ Transform:
   - {fileID: 582033591}
   m_Father: {fileID: 2095958989}
   m_RootOrder: 1
---- !u!54 &847633675
+--- !u!54 &847633672
 Rigidbody:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 5400000, guid: 6aa9778ea277e4d8fb8bd267cdf502e7,
@@ -7622,7 +7622,7 @@ GameObject:
   - 23: {fileID: 1505883969}
   - 114: {fileID: 1505883976}
   - 114: {fileID: 1505883975}
-  - 54: {fileID: 1505883974}
+  - 54: {fileID: 1505883967}
   m_Layer: 0
   m_Name: Player3
   m_TagString: Player
@@ -7630,6 +7630,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!54 &1505883967
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5400000, guid: 6aa9778ea277e4d8fb8bd267cdf502e7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1714972557}
+  m_GameObject: {fileID: 1505883966}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: Infinity
+  m_AngularDrag: Infinity
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!23 &1505883969
 Renderer:
   m_ObjectHideFlags: 0
@@ -7685,22 +7701,6 @@ Transform:
   - {fileID: 1661460409}
   m_Father: {fileID: 2095958989}
   m_RootOrder: 2
---- !u!54 &1505883974
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5400000, guid: 6aa9778ea277e4d8fb8bd267cdf502e7,
-    type: 2}
-  m_PrefabInternal: {fileID: 1714972557}
-  m_GameObject: {fileID: 1505883966}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: Infinity
-  m_AngularDrag: Infinity
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &1505883975
 MonoBehaviour:
   m_ObjectHideFlags: 0

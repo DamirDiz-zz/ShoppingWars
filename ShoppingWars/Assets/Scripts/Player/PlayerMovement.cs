@@ -30,9 +30,13 @@ public class PlayerMovement : MonoBehaviour
 		float h = Input.GetAxisRaw (controlsHorizontal);
 		float v = Input.GetAxisRaw (controlsVertical);
 	
+
 		Vector3 movement = new Vector3(h, 0.0f, v);
 
-		transform.rotation = Quaternion.LookRotation(movement);
+		if (h != 0 || v != 0) {
+			transform.rotation = Quaternion.LookRotation (movement);
+		}
+
 		transform.Translate (movement * speed * Time.deltaTime, Space.World);
 	}
 }
