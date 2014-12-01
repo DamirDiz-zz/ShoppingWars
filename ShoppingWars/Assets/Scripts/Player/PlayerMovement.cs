@@ -2,8 +2,7 @@
 
 public class PlayerMovement : MonoBehaviour
 {
-	public float speed = 6f;            // The speed that the player will move at.
-	public float rotateSpeed = 2.0f;
+	public float speed;            // The speed that the player will move at.
 
 	public string controlsHorizontal = "";
 	public string controlsVertical = "";
