@@ -4,8 +4,8 @@ public class PlayerMovement : MonoBehaviour
 {
 	public float speed;            // The speed that the player will move at.
 
-	public string controlsHorizontal = "";
-	public string controlsVertical = "";
+	public string controlsHorizontal;
+	public string controlsVertical;
 	
 	Vector3 movement;                   // The vector to store the direction of the player's movement.
 	//Animator anim;                      // Reference to the animator component.
@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
 		// Store the input axes.
 		float h = Input.GetAxisRaw (controlsHorizontal);
 		float v = Input.GetAxisRaw (controlsVertical);
-
+	
 		Vector3 movement = new Vector3(h, 0.0f, v);
 
 		transform.rotation = Quaternion.LookRotation(movement);
