@@ -8,7 +8,6 @@ public class PlayerItems : MonoBehaviour {
 	List<GameObject> collectedItems;
 	public string name = "";
 	public Text text;
-	int score = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -26,7 +25,6 @@ public class PlayerItems : MonoBehaviour {
 		if(col.gameObject.tag == "Item")
 		{
 			collectedItems.Add(col.gameObject);
-			score = score + 1;
 			text.text =  name + "\nScore: " + collectedItems.Count;
 			Destroy(col.gameObject);
 			Debug.Log (collectedItems.Count);
