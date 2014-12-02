@@ -948,7 +948,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &148784268
 Transform:
   m_ObjectHideFlags: 0
@@ -1674,7 +1674,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 84
   m_CollisionDetection: 0
 --- !u!23 &326694707
 Renderer:
@@ -3109,7 +3109,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 84
   m_CollisionDetection: 0
 --- !u!23 &673635459
 Renderer:
@@ -4002,7 +4002,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 84
   m_CollisionDetection: 0
 --- !u!114 &847633676
 MonoBehaviour:
@@ -5671,6 +5671,10 @@ Prefab:
     - target: {fileID: 11400002, guid: 6aa9778ea277e4d8fb8bd267cdf502e7, type: 2}
       propertyPath: controlsVertical
       value: Vertical4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 6aa9778ea277e4d8fb8bd267cdf502e7, type: 2}
+      propertyPath: m_Constraints
+      value: 84
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6aa9778ea277e4d8fb8bd267cdf502e7, type: 2}
@@ -7423,7 +7427,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1454367548}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .133098364, y: -.25, z: 2.09786987}
+  m_LocalPosition: {x: .129999995, y: .430000007, z: 2.0999999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 617525738}
@@ -7644,7 +7648,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 84
   m_CollisionDetection: 0
 --- !u!23 &1505883969
 Renderer:
@@ -8746,6 +8750,10 @@ Prefab:
       propertyPath: controlsVertical
       value: Vertical3
       objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 6aa9778ea277e4d8fb8bd267cdf502e7, type: 2}
+      propertyPath: m_Constraints
+      value: 84
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6aa9778ea277e4d8fb8bd267cdf502e7, type: 2}
   m_RootGameObject: {fileID: 1505883966}
@@ -8859,6 +8867,10 @@ Prefab:
     - target: {fileID: 11400002, guid: 6aa9778ea277e4d8fb8bd267cdf502e7, type: 2}
       propertyPath: controlsVertical
       value: Vertical1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 6aa9778ea277e4d8fb8bd267cdf502e7, type: 2}
+      propertyPath: m_Constraints
+      value: 84
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6aa9778ea277e4d8fb8bd267cdf502e7, type: 2}
@@ -9828,6 +9840,10 @@ Prefab:
     - target: {fileID: 11400002, guid: 6aa9778ea277e4d8fb8bd267cdf502e7, type: 2}
       propertyPath: controlsVertical
       value: Vertical2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: 6aa9778ea277e4d8fb8bd267cdf502e7, type: 2}
+      propertyPath: m_Constraints
+      value: 84
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6aa9778ea277e4d8fb8bd267cdf502e7, type: 2}
