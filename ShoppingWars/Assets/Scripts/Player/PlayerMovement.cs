@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
 	public string controlsVertical;
 	
 	Vector3 movement;                   // The vector to store the direction of the player's movement.
-	//Animator anim;                      // Reference to the animator component.
+	Animator anim;                      // Reference to the animator component.
 	Rigidbody playerRigidbody;          // Reference to the player's rigidbody.
 	int floorMask;                      // A layer mask so that a ray can be cast just at gameobjects on the floor layer.
 	float camRayLength = 100f;          // The length of the ray from the camera into the scene.
@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
 		floorMask = LayerMask.GetMask ("Floor");
 		
 		// Set up references.
-		//anim = GetComponent <Animator> ();
+		anim = GetComponent <Animator> ();
 		playerRigidbody = GetComponent <Rigidbody> ();
 	}
 	
@@ -33,11 +33,14 @@ public class PlayerMovement : MonoBehaviour
 
 		Vector3 movement = new Vector3(h, 0.0f, v);
 
-		if (h != 0 || v != 0) {
+		if (h != 0f || v != 0f) {
 			transform.rotation = Quaternion.LookRotation (movement);
+			anim.SetBool ("IsWalking", true);
+		} else {
+			anim.SetBool ("IsWalking", false);
 		}
 
-		transform.Translate (movement * speed * Time.deltaTime, Space.World);
+		transform.Translate (movement.normalized * speed * Time.deltaTime, Space.World);
 	}
 }
 
