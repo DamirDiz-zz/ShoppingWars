@@ -2138,6 +2138,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0424c6e4401d144779cb35d4d78a72f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name: Player 1
+  text: {fileID: 883427773}
 --- !u!114 &297631616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4137,6 +4139,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0424c6e4401d144779cb35d4d78a72f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name: Player 4
+  text: {fileID: 848530752}
 --- !u!114 &646950574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6363,6 +6367,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0424c6e4401d144779cb35d4d78a72f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name: Player 2
+  text: {fileID: 2123930424}
 --- !u!114 &911142885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7673,6 +7679,14 @@ Prefab:
       propertyPath: m_Name
       value: Player2
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 10c3a0a332aea4f58b054335c155cd3a, type: 2}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 2123930424}
+    - target: {fileID: 11400000, guid: 10c3a0a332aea4f58b054335c155cd3a, type: 2}
+      propertyPath: name
+      value: Player 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 10c3a0a332aea4f58b054335c155cd3a, type: 2}
   m_RootGameObject: {fileID: 911142880}
@@ -8167,6 +8181,14 @@ Prefab:
     - target: {fileID: 11400002, guid: 10c3a0a332aea4f58b054335c155cd3a, type: 2}
       propertyPath: controlsVertical
       value: Vertical3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 10c3a0a332aea4f58b054335c155cd3a, type: 2}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 1917247374}
+    - target: {fileID: 11400000, guid: 10c3a0a332aea4f58b054335c155cd3a, type: 2}
+      propertyPath: name
+      value: Player 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 10c3a0a332aea4f58b054335c155cd3a, type: 2}
@@ -8767,6 +8789,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0424c6e4401d144779cb35d4d78a72f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name: Player 3
+  text: {fileID: 1917247374}
 --- !u!114 &1411671924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12000,6 +12024,14 @@ Prefab:
       propertyPath: m_Name
       value: Player1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 10c3a0a332aea4f58b054335c155cd3a, type: 2}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 883427773}
+    - target: {fileID: 11400000, guid: 10c3a0a332aea4f58b054335c155cd3a, type: 2}
+      propertyPath: name
+      value: Player 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 10c3a0a332aea4f58b054335c155cd3a, type: 2}
   m_RootGameObject: {fileID: 297631612}
@@ -12111,6 +12143,14 @@ Prefab:
     - target: {fileID: 11400002, guid: 10c3a0a332aea4f58b054335c155cd3a, type: 2}
       propertyPath: controlsVertical
       value: Vertical4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 10c3a0a332aea4f58b054335c155cd3a, type: 2}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 848530752}
+    - target: {fileID: 11400000, guid: 10c3a0a332aea4f58b054335c155cd3a, type: 2}
+      propertyPath: name
+      value: Player 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 10c3a0a332aea4f58b054335c155cd3a, type: 2}
