@@ -3,12 +3,14 @@
 public class PlayerMovement : MonoBehaviour
 {
 	public float speed;            // The speed that the player will move at.
-
+	
 	public string controlsHorizontal;
 	public string controlsVertical;
 	
 	Vector3 movement;                   // The vector to store the direction of the player's movement.
-	Animator anim;                      // Reference to the animator component.
+	public float jumpAcc = -Physics.gravity.y*2;
+	Vector3 jumpVector;
+	//Animator anim;                      // Reference to the animator component.
 	Rigidbody playerRigidbody;          // Reference to the player's rigidbody.
 	int floorMask;                      // A layer mask so that a ray can be cast just at gameobjects on the floor layer.
 	float camRayLength = 100f;          // The length of the ray from the camera into the scene.
@@ -19,8 +21,10 @@ public class PlayerMovement : MonoBehaviour
 		floorMask = LayerMask.GetMask ("Floor");
 		
 		// Set up references.
-		anim = GetComponent <Animator> ();
+		//anim = GetComponent <Animator> ();
 		playerRigidbody = GetComponent <Rigidbody> ();
+		jumpVector = new Vector3(0, jumpAcc, 0);
+		
 	}
 	
 	//fired every physics update
@@ -29,18 +33,17 @@ public class PlayerMovement : MonoBehaviour
 		// Store the input axes.
 		float h = Input.GetAxisRaw (controlsHorizontal);
 		float v = Input.GetAxisRaw (controlsVertical);
-	
-
-		Vector3 movement = new Vector3(h, 0.0f, v);
-
-		if (h != 0f || v != 0f) {
+		bool jump = Input.GetButtonDown ("Fire1");
+		
+		
+		Vector3 movement = new Vector3(h, 0.0f, v)*speed + (jump ? jumpVector : Vector3.zero);
+		
+		if (h != 0 || v != 0) {
 			transform.rotation = Quaternion.LookRotation (movement);
-			anim.SetBool ("IsWalking", true);
-		} else {
-			anim.SetBool ("IsWalking", false);
 		}
-
-		transform.Translate (movement.normalized * speed * Time.deltaTime, Space.World);
+		
+		//transform.Translate (movement * Time.deltaTime, Space.World);
+		playerRigidbody.AddForce (movement * Time.deltaTime * 200, ForceMode.Acceleration);
 	}
 }
 
