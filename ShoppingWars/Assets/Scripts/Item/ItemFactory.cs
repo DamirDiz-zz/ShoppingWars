@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class ItemFactory : MonoBehaviour {
 	
-	public float respawnRate = 2f;        // The time between each shot.
+	public float respawnRate = 3f;        // The time between each shot.
 
 	float timer; // A timer to determine when to fire.
 
@@ -14,27 +15,23 @@ public class ItemFactory : MonoBehaviour {
 	 * 3) wenn anzahl der items unter 9 und timer abgelaufen erzeuge item
 	 */
 
-//	// Use this for initialization
-//	void Start () {
-//		
-//	}
-//	
-//	// Update is called once per frame
-//	void Update () {
-//
-//	}
-//
-//
-//	void Update ()
-//    {
-//        timer += Time.deltaTime;
-//
-//
-//
-//		if(timer >= respawnRate)
-//        {
-//            // ... disable the effects.
-//            DisableEffects ();
-//        }
-//    }
+	// Use this for initialization
+	void Start () {
+		
+	}
+
+	void Update ()
+    {
+        timer += Time.deltaTime;
+
+		GameObject[] itemsOnMap = GameObject.FindGameObjectsWithTag ("Item");
+
+		//get the items with tag
+
+		if(timer >= respawnRate)
+        {
+			timer = 0f;
+			Debug.Log (itemsOnMap.Length);
+        }
+    }
 }
