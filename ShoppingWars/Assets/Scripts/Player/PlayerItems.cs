@@ -8,11 +8,13 @@ public class PlayerItems : MonoBehaviour {
 	List<GameObject> collectedItems;
 	public string name = "";
 	public Text text;
+	Animator anim;
 
 	// Use this for initialization
 	void Start () {
 		collectedItems = new List<GameObject>();
 		text.text = name + "\nScore: 0";
+		anim = GetComponent <Animator> ();
 	}
 	
 	// Update is called once per frame
@@ -26,6 +28,7 @@ public class PlayerItems : MonoBehaviour {
 		{
 			collectedItems.Add(col.gameObject);
 			text.text =  name + "\nScore: " + collectedItems.Count;
+			anim.SetTrigger("Punch");
 			Destroy(col.gameObject);
 			Debug.Log (collectedItems.Count);
 		}

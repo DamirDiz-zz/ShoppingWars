@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
 	Vector3 movement;                   // The vector to store the direction of the player's movement.
 	public float jumpAcc = -Physics.gravity.y*2;
 	Vector3 jumpVector;
-	//Animator anim;                      // Reference to the animator component.
+	Animator anim;                      // Reference to the animator component.
 	Rigidbody playerRigidbody;          // Reference to the player's rigidbody.
 	int floorMask;                      // A layer mask so that a ray can be cast just at gameobjects on the floor layer.
 	float camRayLength = 100f;          // The length of the ray from the camera into the scene.
@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
 		floorMask = LayerMask.GetMask ("Floor");
 		
 		// Set up references.
-		//anim = GetComponent <Animator> ();
+		anim = GetComponent <Animator> ();
 		playerRigidbody = GetComponent <Rigidbody> ();
 		jumpVector = new Vector3(0, jumpAcc, 0);
 		
@@ -41,6 +41,8 @@ public class PlayerMovement : MonoBehaviour
 		if (h != 0 || v != 0) {
 			transform.rotation = Quaternion.LookRotation (movement);
 		}
+
+		anim.SetBool("IsWalking", (h != 0 || v != 0));
 		
 		//transform.Translate (movement * Time.deltaTime, Space.World);
 		playerRigidbody.AddForce (movement * Time.deltaTime * 200, ForceMode.Acceleration);
