@@ -9,11 +9,12 @@ public class PlayerItems : MonoBehaviour {
 	public string name = "";
 	public Text text;
 	Animator anim;
+	int health = 100;
 
 	// Use this for initialization
 	void Start () {
 		collectedItems = new List<GameObject>();
-		text.text = name + "\nScore: 0";
+		text.text = getText();
 		anim = GetComponent <Animator> ();
 	}
 	
@@ -27,10 +28,19 @@ public class PlayerItems : MonoBehaviour {
 		if(col.gameObject.tag == "Item")
 		{
 			collectedItems.Add(col.gameObject);
-			text.text =  name + "\nScore: " + collectedItems.Count;
 			anim.SetTrigger("Punch");
 			Destroy(col.gameObject);
 			Debug.Log (collectedItems.Count);
 		}
+		else if (col.gameObject.tag == "Cart")
+		{
+			health -= 10;
+		}
+		text.text = getText();
 	}
+	
+	string getText() {
+		return name + "\nScore: " + collectedItems.Count + "\nHealth: " + health + "%";
+	}
+
 }
