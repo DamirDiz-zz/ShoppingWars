@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 
 Project("{1E0912DE-DEA8-13A6-70DF-9DA08306C1B5}") = "ShoppingWars", "Assembly-CSharp.csproj", "{051B8496-0386-1739-5B21-4F5259F7F830}"
 EndProject
-Project("{1E0912DE-DEA8-13A6-70DF-9DA08306C1B5}") = "ShoppingWars", "Assembly-UnityScript-firstpass.unityproj", "{8F5D31D9-988B-974C-FE50-90319E3DA1D0}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,15 +13,11 @@ Global
 		{051B8496-0386-1739-5B21-4F5259F7F830}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{051B8496-0386-1739-5B21-4F5259F7F830}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{051B8496-0386-1739-5B21-4F5259F7F830}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8F5D31D9-988B-974C-FE50-90319E3DA1D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8F5D31D9-988B-974C-FE50-90319E3DA1D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8F5D31D9-988B-974C-FE50-90319E3DA1D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8F5D31D9-988B-974C-FE50-90319E3DA1D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																																															GlobalSection(MonoDevelopProperties) = preSolution
+																																																			GlobalSection(MonoDevelopProperties) = preSolution
 =======
 																																	GlobalSection(MonoDevelopProperties) = preSolution
 >>>>>>> Stashed changes
