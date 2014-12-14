@@ -77583,7 +77583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abf69440b92e24db9b9a8a27ad63597a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLeft: 60
+  timeLeft: 120
   timerText: {fileID: 171326687}
   startText: {fileID: 1937017743}
   gameOverText: {fileID: 465593303}
@@ -80959,7 +80959,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Press space to start!
+  m_Text: Press the start button!
 --- !u!222 &1937017744
 CanvasRenderer:
   m_ObjectHideFlags: 0
