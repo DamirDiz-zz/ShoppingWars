@@ -62,6 +62,7 @@ public class PlayerController : MonoBehaviour {
 			if (health <= 0 && !isFreezed) {
 				isFreezed = true;
 				timeFreeze = 5.0f;
+				SoundController.PlayFreezeSound();
 				particles.SetActive (true);
 			}
 
@@ -86,12 +87,13 @@ public class PlayerController : MonoBehaviour {
 			collectedItems.Add(col.gameObject);
 			GameController.scores[name] = collectedItems.Count;
 			anim.SetTrigger("Punch");
+			SoundController.PlayPickupSound();
 			Destroy(col.gameObject);
-			Debug.Log (collectedItems.Count);
 		}
 		else if (col.gameObject.tag == "Cart")
 		{
 			health = Mathf.Max(health - Random.Range(30, 60), 0);
+			SoundController.PlayHitSound();
 		}
 		text.text = getText();
 	}

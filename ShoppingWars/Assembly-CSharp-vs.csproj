@@ -50,6 +50,7 @@
      <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\Item\ItemFactory.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\SoundController.cs" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
  <Reference Include="Assembly-UnityScript-firstpass">
  <HintPath>/Users/per/dev/ShoppingWars/ShoppingWars/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
