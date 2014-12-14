@@ -34,16 +34,17 @@ public class ItemFactory : MonoBehaviour {
 
 	void Update ()
     {
-        timer += Time.deltaTime;
+		if (GameController.isRunning) {
+				timer += Time.deltaTime;
 
-		GameObject[] itemsOnMap = GameObject.FindGameObjectsWithTag ("Item");
+				GameObject[] itemsOnMap = GameObject.FindGameObjectsWithTag ("Item");
 
-		//get the items with tag
+				//get the items with tag
 
-		if(timer >= respawnRate && itemsOnMap.Length < itemMax)
-        {
-			spawn ();
-        }
+				if (timer >= respawnRate && itemsOnMap.Length < itemMax) {
+						spawn ();
+				}
+		}
     }
 
 	void spawn () 

@@ -11,7 +11,6 @@ public class PlayerMovement : MonoBehaviour
 	Animator anim;                      // Reference to the animator component.
 	Rigidbody playerRigidbody;          // Reference to the player's rigidbody.
 	int floorMask;                      // A layer mask so that a ray can be cast just at gameobjects on the floor layer.
-	float camRayLength = 100f;          // The length of the ray from the camera into the scene.
 	
 	void Awake ()
 	{
@@ -27,22 +26,22 @@ public class PlayerMovement : MonoBehaviour
 	//fired every physics update
 	void FixedUpdate ()
 	{
-		// Store the input axes.
-		float h = Input.GetAxisRaw (controlsHorizontal);
-		float v = Input.GetAxisRaw (controlsVertical);
-				
-		Vector3 movement = new Vector3(h, 0.0f, v)*speed;
+		if (GameController.isRunning) {
+				// Store the input axes.
+				float h = Input.GetAxisRaw (controlsHorizontal);
+				float v = Input.GetAxisRaw (controlsVertical);
 		
-		if (h != 0 || v != 0) {
-			transform.rotation = Quaternion.LookRotation (movement);
+				Vector3 movement = new Vector3 (h, 0.0f, v) * speed;
+
+				if (h != 0 || v != 0) {
+						transform.rotation = Quaternion.LookRotation (movement);
+				}
+
+				anim.SetBool ("IsWalking", (h != 0 || v != 0));
+
+				//transform.Translate (movement * Time.deltaTime, Space.World);
+				playerRigidbody.AddForce (movement * Time.deltaTime * 200, ForceMode.Acceleration);
 		}
-
-		anim.SetBool("IsWalking", (h != 0 || v != 0));
-		
-		//transform.Translate (movement * Time.deltaTime, Space.World);
-		playerRigidbody.AddForce (movement * Time.deltaTime * 200, ForceMode.Acceleration);
-
-
 	}
 }
 

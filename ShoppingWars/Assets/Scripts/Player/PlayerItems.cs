@@ -28,6 +28,7 @@ public class PlayerItems : MonoBehaviour {
 		if(col.gameObject.tag == "Item")
 		{
 			collectedItems.Add(col.gameObject);
+			GameController.scores[name] = collectedItems.Count;
 			anim.SetTrigger("Punch");
 			Destroy(col.gameObject);
 			Debug.Log (collectedItems.Count);
