@@ -66,13 +66,14 @@ public class PlayerController : MonoBehaviour {
 			}
 
 			if (isFreezed) {
-				timeFreeze -= Mathf.Max(Time.deltaTime, 0f);
+				timeFreeze = Mathf.Max(timeFreeze - Time.deltaTime, 0f);
 			}
 
-			if (isFreezed && timeFreeze <= 0) {
+			if (isFreezed && timeFreeze <= 0f) {
 				isFreezed = false;
 				health = 100;
 				particles.SetActive (false);
+				text.text = getText();
 			}
 		}
 		

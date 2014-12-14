@@ -29,11 +29,11 @@ public class GameController : MonoBehaviour
 	
 	void Update ()
 	{
-		if (Input.GetKeyDown (KeyCode.R)) {  
+		if (Input.GetKeyDown (KeyCode.R) || Input.GetButtonDown("Back")) {  
 			Application.LoadLevel (0);  
 		} 
 
-		if (!isRunning && Input.GetKeyDown(KeyCode.Space) && timeLeft > 0) {
+		if (!isRunning && (Input.GetButtonDown("Start") || Input.GetKeyDown(KeyCode.Space)) && timeLeft > 0) {
 			isRunning = true;
 			startText.enabled = false;
 		}
@@ -67,6 +67,8 @@ public class GameController : MonoBehaviour
 			else {
 				gameOverText.text = "Game over!\n It's a draw!";
 			}
+
+			gameOverText.text += "\nPress Back to play again.";
 
 			gameOverText.enabled = true;
 		}
