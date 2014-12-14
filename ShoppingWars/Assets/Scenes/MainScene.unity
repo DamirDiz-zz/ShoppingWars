@@ -11685,11 +11685,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 297631612}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0424c6e4401d144779cb35d4d78a72f5, type: 3}
+  m_Script: {fileID: 11500000, guid: b7f3f3112e9a84cf0b9927fa102b304b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   name: Blue
   text: {fileID: 883427773}
+  speed: 6
+  controlsHorizontal: Horizontal1
+  controlsVertical: Vertical1
 --- !u!114 &297631616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11702,9 +11705,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aec064b08c796404196bd285f13c7a84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
-  controlsHorizontal: Horizontal1
-  controlsVertical: Vertical1
 --- !u!95 &297631617
 Animator:
   serializedVersion: 3
@@ -77107,7 +77107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abf69440b92e24db9b9a8a27ad63597a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLeft: 180
+  timeLeft: 60
   timerText: {fileID: 171326687}
   startText: {fileID: 1937017743}
   gameOverText: {fileID: 465593303}
@@ -83676,7 +83676,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 2023794943}
   - 95: {fileID: 2023794949}
-  - 114: {fileID: 2023794948}
   - 54: {fileID: 2023794946}
   - 136: {fileID: 2023794945}
   - 114: {fileID: 2023794947}
@@ -83774,23 +83773,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2023794942}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0424c6e4401d144779cb35d4d78a72f5, type: 3}
+  m_Script: {fileID: 11500000, guid: b7f3f3112e9a84cf0b9927fa102b304b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   name: Red
   text: {fileID: 2123930424}
---- !u!114 &2023794948
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400002, guid: 66779df0caa404820997fe371234169e,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2023794942}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aec064b08c796404196bd285f13c7a84, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   speed: 6
   controlsHorizontal: Horizontal2
   controlsVertical: Vertical2
