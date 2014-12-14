@@ -7,9 +7,7 @@ public class PlayerMovement : MonoBehaviour
 	public string controlsHorizontal;
 	public string controlsVertical;
 	
-	Vector3 movement;                   // The vector to store the direction of the player's movement.
-	public float jumpAcc = -Physics.gravity.y*2;
-	Vector3 jumpVector;
+	Vector3 movement;                   // The vector to store the direction of the player's movement
 	Animator anim;                      // Reference to the animator component.
 	Rigidbody playerRigidbody;          // Reference to the player's rigidbody.
 	int floorMask;                      // A layer mask so that a ray can be cast just at gameobjects on the floor layer.
@@ -23,7 +21,6 @@ public class PlayerMovement : MonoBehaviour
 		// Set up references.
 		anim = GetComponent <Animator> ();
 		playerRigidbody = GetComponent <Rigidbody> ();
-		jumpVector = new Vector3(0, jumpAcc, 0);
 		
 	}
 	
@@ -33,10 +30,8 @@ public class PlayerMovement : MonoBehaviour
 		// Store the input axes.
 		float h = Input.GetAxisRaw (controlsHorizontal);
 		float v = Input.GetAxisRaw (controlsVertical);
-		bool jump = Input.GetButtonDown ("Fire1");
-		
-		
-		Vector3 movement = new Vector3(h, 0.0f, v)*speed + (jump ? jumpVector : Vector3.zero);
+				
+		Vector3 movement = new Vector3(h, 0.0f, v)*speed;
 		
 		if (h != 0 || v != 0) {
 			transform.rotation = Quaternion.LookRotation (movement);
@@ -46,6 +41,8 @@ public class PlayerMovement : MonoBehaviour
 		
 		//transform.Translate (movement * Time.deltaTime, Space.World);
 		playerRigidbody.AddForce (movement * Time.deltaTime * 200, ForceMode.Acceleration);
+
+
 	}
 }
 
